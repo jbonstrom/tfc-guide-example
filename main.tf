@@ -1,13 +1,15 @@
-provider "aws" {
-  region = var.aws_region
+provider "google" {
+  credentials = var.credsvar
+  project = "web-project-dev"
+  region = "us-west1"
 }
 
-resource "aws_instance" "example_instance" {
-  ami  = "ami-05655c267c89566dd"
-  instance_type = "t2.micro"
+resource "google_compute_instance" "vm_instance" {
+  name = "testinstance"
+  machine_type = "n1-standard-1"
   
-  tags = {
-	Name = "${var.instance_name}"
+  boot_disk {
+	initialze_params {
+		image = "centos/centos-7"
 	}
-  
 }
