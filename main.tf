@@ -12,4 +12,10 @@ resource "google_compute_instance" "vm_instance" {
 		image = "centos/centos-7"
 		}
 	}
+	
+  network_interface {
+    network = google_compute_network.vpc_network.self_link
+    access_config {
+    }
+  }
 }
