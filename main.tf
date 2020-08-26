@@ -11,7 +11,7 @@ resource "google_compute_instance" "vm_instance" {
   
   boot_disk {
 	initialize_params {
-		image = "centos/centos-7"
+		image = "centos-7"
 		}
 	}
 	
