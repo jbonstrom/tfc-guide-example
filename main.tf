@@ -1,6 +1,7 @@
 provider "google" {
   project = "web-project-dev"
   region = "us-west1"
+  zone = "us-west1-b"
   credentials = var.gcpcreds
 }
 
