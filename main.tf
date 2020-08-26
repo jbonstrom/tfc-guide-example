@@ -1,6 +1,7 @@
 provider "google" {
   project = "web-project-dev"
   region = "us-west1"
+  credentials = var.gcpcreds
 }
 
 resource "google_compute_instance" "vm_instance" {

@@ -7,3 +7,8 @@ variable "instance_name" {
   type    = string
   default = "first_tformcloud01"
 }
+
+variable "gcpcreds" {
+  type    = string
+  default = " "
+}
